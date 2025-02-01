@@ -77,10 +77,6 @@
 			{#each projects as project}
 				<Project {...project} />
 			{/each}
-<!--			<div class="text-2xl bg-cyan-300 h-96 rounded-3xl"></div>-->
-<!--			<div class="text-2xl bg-cyan-300 h-96 rounded-3xl"></div>-->
-<!--			<div class="text-2xl bg-cyan-300 h-96 rounded-3xl"></div>-->
-<!--			<div class="text-2xl bg-cyan-300 h-96 rounded-3xl"></div>-->
 		</div>
 	</section>
 

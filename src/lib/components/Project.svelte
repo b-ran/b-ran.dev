@@ -7,7 +7,7 @@
 </script>
 
 <Card>
-	<div class="w-full max-w-[850px] h-[478px] relative rounded-3xl overflow-hidden group">
+	<div class="w-full max-w-[850px] h-[478px] relative rounded-3xl overflow-hidden group text-zinc-900">
 		<!-- Image container with hover effect -->
 		<div class="absolute inset-0">
 			<img
@@ -21,8 +21,8 @@
 		<div
 			class="relative h-full flex flex-col justify-end transition-transform duration-500 ease-out group-hover:-translate-y-4">
 			<div class="p-8 bg-white/20 backdrop-blur-sm transition-colors duration-500 ease-out group-hover:bg-white/30">
-				<h2 class="text-2xl font-bold text-zinc-900">{title}</h2>
-				<p class="mt-4 text-lg text-zinc-900">{description}</p>
+				<h2 class="text-2xl font-bold ">{title}</h2>
+				<p class="mt-4 text-lg">{description}</p>
 
 				<Link {href}>
 					<span class="mt-1 font-semibold mr-2">View Project</span>

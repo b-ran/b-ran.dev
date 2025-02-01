@@ -1,16 +1,9 @@
 <script lang="ts">
+	// Svelte
+	import { scale, fade } from 'svelte/transition';
+
 	// Components
-	import Drawer from '$lib/components/Drawer.svelte';
-	import IconButton from '$lib/components/buttons/IconButton.svelte';
-	import Filter from '$lib/components/icons/Filter.svelte';
-	import Card from '$lib/components/Card.svelte';
 	import Project from '$lib/components/Project.svelte';
-
-	let isDrawerOpen = $state(false);
-
-	function toggleDrawer() {
-		isDrawerOpen = !isDrawerOpen;
-	}
 
 	let projects = [
 		{
@@ -51,6 +44,15 @@
 		}
 	];
 
+	let search = $state('');
+
+	let filteredProjects = $derived.by(() => {
+		if (search === '') return projects;
+
+		return projects.filter(project => {
+			return project.title.toLowerCase().includes(search.toLowerCase());
+		});
+	});
 </script>
 
 <title>Projects</title>
@@ -64,25 +66,30 @@
 			<input
 				type="text"
 				placeholder="Search Projects..."
-				class="p-4 pr-12 border w-full mt-2.5 rounded-2xl focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+				bind:value={search}
+				class="p-4 pr-12 border w-full text-zinc-900 mt-2.5 rounded-2xl focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
 			>
-			<div class="absolute right-6 top-[20px] md:hidden">
-				<IconButton onclick={toggleDrawer}>
-					<Filter />
-				</IconButton>
-			</div>
 		</div>
-
-
 	</section>
 
 	<section class="flex flex-col items-center gap-10">
-		{#each projects as project}
+		{#each filteredProjects as project}
+			<div class="w-full"
+				in:scale={{duration: 300, delay: 300, start: 0.95}}
+				out:fade={{duration: 200}}
+			>
 			<Project {...project} />
+			</div>
 		{/each}
+
+		{#if filteredProjects.length === 0}
+			<p
+				class="text-lg mt-8"
+				in:fade
+			>
+				No projects found matching "{search}"
+			</p>
+		{/if}
+
 	</section>
 </main>
-
-<Drawer bind:isDrawerOpen>
-	hello
-</Drawer>
