@@ -1,0 +1,1 @@
+Made with Svelte 5, SvelteKit, TailwindCSS, and Deployed on Vercel. Author: github.com/b-ran

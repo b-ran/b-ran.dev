@@ -9,34 +9,10 @@
 	import Button from '$lib/components/buttons/Button.svelte';
 	import Project from '$lib/components/Project.svelte';
 
-	let { form } = $props();
+	// Exports
+	import projects from '$lib/shared/projects';
 
-	let projects = [
-		{
-			title: 'Project 1',
-			description: 'This is a description of project 1',
-			image: 'https://placehold.co/850',
-			href: 'https://google.com'
-		},
-		{
-			title: 'Project 2',
-			description: 'This is a description of project 2',
-			image: 'https://placehold.co/850',
-			href: 'https://google.com'
-		},
-		{
-			title: 'Project 3',
-			description: 'This is a description of project 3',
-			image: 'https://placehold.co/850',
-			href: 'https://google.com'
-		},
-		{
-			title: 'Project 4',
-			description: 'This is a description of project 4',
-			image: 'https://placehold.co/850',
-			href: 'https://google.com'
-		},
-	]
+	let { form } = $props();
 
 </script>
 
@@ -75,7 +51,9 @@
 
 		<div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-4">
 			{#each projects as project}
-				<Project {...project} />
+				{#if project.highlight}
+					<Project {...project} />
+				{/if}
 			{/each}
 		</div>
 	</section>
