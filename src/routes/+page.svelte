@@ -11,6 +11,7 @@
 
 	// Exports
 	import projects from '$lib/shared/projects';
+	import Highlight from '$lib/components/Highlight.svelte';
 
 	let { form } = $props();
 
@@ -53,10 +54,10 @@
 			</Link>
 		</div>
 
-		<div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-4">
-			{#each projects as project}
+		<div class="mt-12 grid grid-cols-1 gap-20">
+			{#each projects as project, index}
 				{#if project.highlight}
-					<Project {...project} />
+					<Highlight {...project} alternate={index % 2 === 1} />
 				{/if}
 			{/each}
 		</div>
