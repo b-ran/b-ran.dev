@@ -7,7 +7,7 @@ import nix from '$lib/assets/projects/nix.png';
 const projects = [
 	{
 		title: 'The Sauce',
-		description: 'A business insights and visualization web platform for ANZ Business Customers. Built in collaboration between DOT Loves Data and ANZ ',
+		description: 'A business insights and visualization web platform for ANZ Business Customers. Built in collaboration between DOT Loves Data and ANZ.',
 		image: theSauce,
 		href: 'https://sauce.anz.co.nz',
 		tags: ['SvelteKit', 'Typescript', 'TailwindCSS', 'Supabase', 'AWS', 'Docker'],
@@ -18,7 +18,7 @@ const projects = [
 		description: 'Web application that collates and visualizes data from across New Zealand to help community organizations make data-driven decisions.',
 		image: cc,
 		href: 'https://app.communitycompass.co.nz',
-		tags: ['SvelteKit', 'Typescript', 'TailwindCSS', 'AWS', 'Kubernetes', 'Docker'],
+		tags: ['SvelteKit', 'Typescript', 'Python', 'FastAPI', 'TailwindCSS', 'AWS', 'Kubernetes', 'Docker'],
 		highlight: true
 	},
 	{
@@ -27,7 +27,7 @@ const projects = [
 		image: dotPortal,
 		href: 'https://products.dotlovesdata.com',
 		tags: ['Django', 'Python', 'FastAPI', 'AWS', 'Kubernetes', 'Docker'],
-		highlight: true
+		highlight: false
 	},
 	{
 		title: 'CV PDF Generator',
@@ -35,7 +35,7 @@ const projects = [
 		image: cvGen,
 		href: 'https://github.com/b-ran/cv-gen',
 		tags: ['Node' , 'Typescript', 'Javascript', 'PDFMake'],
-		highlight: true
+		highlight: false
 	},
 	{
 		title: 'NixOS Desktop',
