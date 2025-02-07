@@ -1,9 +1,15 @@
 <script lang="ts">
+	// Types
+	import type { Snippet } from 'svelte';
+
 	// Svelte
 	import { slide } from 'svelte/transition';
 	import { quintOut } from 'svelte/easing';
 
-	let { children, isDrawerOpen = $bindable(false)} = $props();
+	let { children, isDrawerOpen = $bindable(false)}: {
+		children?: Snippet;
+		isDrawerOpen?: boolean;
+	} = $props();
 
 	function toggleDrawer() {
 		isDrawerOpen = !isDrawerOpen;
@@ -16,11 +22,11 @@
 			w-screen md:w-full md:h-auto bg-blue-50 dark:bg-zinc-900 md:bg-transparent z-50"
 		transition:slide={{ duration: 300, easing: quintOut, axis: 'y' }}
 	>
-		{@render children()}
+		{@render children?.()}
 	</div>
 {:else}
 	<div class="hidden md:flex items-center flex-grow">
-		{@render children()}
+		{@render children?.()}
 	</div>
 {/if}
 

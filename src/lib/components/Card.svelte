@@ -1,5 +1,10 @@
 <script lang="ts">
-	let { children } = $props();
+	// Types
+	import type { Snippet } from 'svelte';
+
+	let { children }: {
+		children?: Snippet;
+	} = $props();
 </script>
 
 <div class="w-full h-full rounded-3xl overflow-hidden">

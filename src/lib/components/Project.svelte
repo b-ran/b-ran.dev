@@ -4,7 +4,13 @@
 	import Card from '$lib/components/Card.svelte';
 	import Chip from '$lib/components/Chip.svelte';
 
-	let { title, description, image, href, tags } = $props();
+	let { title, description, image, href, tags }: {
+		title: string,
+		description: string,
+		image: string,
+		href: string,
+		tags: string[]
+	} = $props();
 </script>
 
 <a {href}>
