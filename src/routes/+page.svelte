@@ -19,14 +19,13 @@
 <title>Brandon Scott-Hill</title>
 
 <main>
-	<section class="pt-48 grid md:grid-cols-2 grid-cols-1 gap-20">
-
-		<div>
-			<h1 class="font-extrabold text-5xl leading-snug mb-5">
+	<section class="pt-48 grid md:grid-cols-2 grid-cols-1 gap-64 items-center">
+		<div class="flex flex-col">
+			<h1 class="font-extrabold text-6xl leading-snug mb-5">
 				Hello there, I'm Brandon Scott-Hill
 			</h1>
 
-			<p class="text-xl mb-5">
+			<p class="text-xl mb-5 leading-8">
 				A <b>Software Engineer</b> who uses creativity and experience to solve problems.
 				Creates clear, maintainable code and works closely with different teams
 				to deliver results.
@@ -36,13 +35,18 @@
 		</div>
 
 		<div>
-			<div class="text-2xl bg-cyan-300 h-96 rounded-3xl"></div>
+			<div class="ml-10 bg-cyan-300 h-[520px] w-[480px] rounded-3xl"></div>
 		</div>
 	</section>
 
-	<section class="mt-32">
+	<section class="mt-80">
 		<div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
-			<h1 class="font-extrabold text-4xl">Highlighted Projects</h1>
+			<div class="flex flex-col gap-8">
+				<h1 class="font-extrabold text-4xl">Highlighted Projects</h1>
+				<p class="text-xl mb-5">
+					Here are some of the projects I have worked on
+				</p>
+			</div>
 			<Link href="projects">
 				<span class="font-semibold mr-2">View all </span>
 				<RightArrow />
