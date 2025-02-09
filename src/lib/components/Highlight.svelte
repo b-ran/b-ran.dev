@@ -1,14 +1,17 @@
 <script lang="ts">
-
+	// Components
 	import RightArrow from '$lib/components/icons/RightArrow.svelte';
 	import Chip from '$lib/components/Chip.svelte';
 	import Link from '$lib/components/Link.svelte';
+
+	// Types
+	import type { Image } from '$lib/shared/images';
 
 
 	let { title, description, image, href, tags, alternate = false }: {
 		title: string,
 		description: string,
-		image: string,
+		image: Image,
 		href: string,
 		tags: string[],
 		alternate: boolean
@@ -42,6 +45,6 @@
 	</div>
 
 	<div class="lg:w-1/2">
-		<img src={image} alt="" />
+		<img src={image.src} alt={image.alt} />
 	</div>
 </div>

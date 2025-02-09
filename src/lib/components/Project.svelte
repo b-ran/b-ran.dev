@@ -4,10 +4,13 @@
 	import Card from '$lib/components/Card.svelte';
 	import Chip from '$lib/components/Chip.svelte';
 
+	// Types
+	import type { Image } from '$lib/shared/images';
+
 	let { title, description, image, href, tags }: {
 		title: string,
 		description: string,
-		image: string,
+		image: Image,
 		href: string,
 		tags: string[]
 	} = $props();
@@ -18,8 +21,8 @@
 		<div class="group bg-white dark:bg-zinc-800 text-zinc-900 dark:text-blue-50 h-full flex flex-col">
 			<div class="relative overflow-hidden">
 				<img
-					src={image}
-					alt={title}
+					src={image.src}
+					alt={image.alt}
 					class="transition-transform duration-500 ease-out group-hover:scale-110"
 				>
 			</div>
