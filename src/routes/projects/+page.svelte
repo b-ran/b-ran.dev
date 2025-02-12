@@ -30,12 +30,12 @@
 
 <title>Projects</title>
 
-<main class="max-w-[850px] mx-auto">
+<main class="max-w-[1400px] mx-auto">
 	<section class="flex flex-col items-center mb-10">
 		<h1 class="font-extrabold text-5xl leading-snug mb-5">Projects</h1>
 		<p class="text-xl mb-5">Here are some of the projects I have worked on.</p>
 
-		<div class="relative w-full">
+		<div class="relative w-full lg:w-9/12">
 			<input
 				type="text"
 				placeholder="Search Projects..."
@@ -45,7 +45,7 @@
 		</div>
 	</section>
 
-	<section class="flex flex-col items-center gap-10">
+	<section class="grid grid-cols-1 items-center gap-10 max-w-[850px] mx-auto">
 		{#each filteredProjects as project}
 			<div class="w-full"
 				in:scale={{duration: 300, delay: 300, start: 0.95}}

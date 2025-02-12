@@ -20,10 +20,10 @@
 <title>Brandon Scott-Hill</title>
 
 <main>
-	<section class="pt-48 grid md:grid-cols-2 grid-cols-1 gap-64 items-center">
+	<section class="pt-48 gap-64 items-center max-w-96">
 		<div class="flex flex-col">
 			<h1 class="font-extrabold text-6xl leading-snug mb-5">
-				Hello there, I'm Brandon Scott-Hill
+				I'm Brandon Scott-Hill
 			</h1>
 
 			<p class="text-xl mb-5 leading-8">
@@ -35,9 +35,6 @@
 			<Social />
 		</div>
 
-		<div>
-			<div class="ml-10 bg-cyan-300 h-[520px] w-[480px] rounded-3xl"></div>
-		</div>
 	</section>
 
 	<section class="mt-80">

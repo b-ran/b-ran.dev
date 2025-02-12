@@ -18,7 +18,7 @@
 
 <a {href}>
 	<Card>
-		<div class="group bg-white dark:bg-zinc-800 text-zinc-900 dark:text-blue-50 h-full flex flex-col">
+		<div class="group bg-white dark:bg-zinc-800 text-zinc-900 dark:text-blue-50 lg:h-[675px] flex flex-col">
 			<div class="relative overflow-hidden">
 				<img
 					src={image.src}
