@@ -7,6 +7,6 @@
 	} = $props();
 </script>
 
-<div class="bg-zinc-900 dark:bg-blue-50 text-blue-50 dark:text-zinc-900  rounded-2xl px-2">
+<div class="text-sm px-3 py-1 font-medium bg-zinc-900 dark:bg-blue-50 text-blue-50 dark:text-zinc-900 rounded-[50px] px-2">
 	{@render children?.()}
 </div>
