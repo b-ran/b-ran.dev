@@ -7,6 +7,7 @@
 
 	// Exports
 	import projects from '$lib/shared/projects';
+	import Social from '$lib/components/Social.svelte';
 
 	let search = $state('');
 
@@ -28,24 +29,16 @@
 	});
 </script>
 
-<title>Projects</title>
+<title>Projects | Brandon Scott-Hill</title>
 
-<main class="max-w-[1400px] mx-auto">
-	<section class="flex flex-col items-center mb-10">
-		<h1 class="font-extrabold text-5xl leading-snug mb-5">Projects</h1>
-		<p class="text-xl mb-5">Here are some of the projects I have worked on.</p>
+<main class="py-24 space-y-24">
+	<section class="flex flex-col mb-10">
+		<h1 class="font-extrabold text-5xl leading-snug mb-5">Projects.</h1>
+		<p class="mb-5">Here are some of the projects I have worked on.</p>
 
-		<div class="relative w-full lg:w-9/12">
-			<input
-				type="text"
-				placeholder="Search Projects..."
-				bind:value={search}
-				class="p-4 pr-12 border w-full text-zinc-900 mt-2.5 rounded-2xl focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-			>
-		</div>
 	</section>
 
-	<section class="grid grid-cols-1 items-center gap-10 max-w-[850px] mx-auto">
+	<section class="grid 2xl:grid-cols-2 grid-cols-1 gap-10">
 		{#each filteredProjects as project}
 			<div class="w-full"
 				in:scale={{duration: 300, delay: 300, start: 0.95}}
@@ -54,15 +47,9 @@
 			<Project {...project} />
 			</div>
 		{/each}
+	</section>
 
-		{#if filteredProjects.length === 0}
-			<p
-				class="text-lg mt-8"
-				in:fade
-			>
-				No projects found matching "{search}"
-			</p>
-		{/if}
-
+	<section>
+		<Social />
 	</section>
 </main>
