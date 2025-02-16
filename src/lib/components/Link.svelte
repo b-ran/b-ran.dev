@@ -2,14 +2,16 @@
 	// Types
 	import type { Snippet } from 'svelte';
 
-	let { href, target = '_self', children }: {
+	const props = $props();
+
+	let { children, href, target = '_self',  }: {
+		children?: Snippet
 		href: string,
 		target?: string,
-		children?: Snippet
-	} = $props();
+	} = props;
 
 </script>
 
-<a {href} {target} class="flex items-center hover:underline hover:underline-offset-4">
+<a {href} {target} class='hover:underline hover:underline-offset-4'>
 	{@render children?.()}
 </a>

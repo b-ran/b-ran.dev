@@ -1,103 +1,77 @@
 <script lang="ts">
-	// Svelte
-	import { enhance } from '$app/forms';
-
 	// Components
 	import Social from '$lib/components/Social.svelte';
 	import Link from '$lib/components/Link.svelte';
 	import RightArrow from '$lib/components/icons/RightArrow.svelte';
 	import Button from '$lib/components/buttons/Button.svelte';
-	import Project from '$lib/components/Project.svelte';
 
 	// Exports
 	import projects from '$lib/shared/projects';
-	import Highlight from '$lib/components/Highlight.svelte';
-
-	let { form } = $props();
+	import Project from '$lib/components/Project.svelte';
 
 </script>
 
 <title>Brandon Scott-Hill</title>
 
-<main>
-	<section class="pt-48 gap-64 items-center max-w-96">
-		<div class="flex flex-col">
-			<h1 class="font-extrabold text-6xl leading-snug mb-5">
+<main class="lg:pt-48 lg:space-y-48 py-24 space-y-24">
+	<section>
+		<article class="flex flex-col gap-12 lg:max-w-10/12">
+			<h1 class="font-extrabold tracking-wider text-6xl leading-18">
 				I'm Brandon Scott-Hill
 			</h1>
 
-			<p class="text-xl mb-5 leading-8">
-				A <b>Software Engineer</b> who uses creativity and experience to solve problems.
-				Creates clear, maintainable code and works closely with different teams
-				to deliver results.
+			<p class="leading-12">
+				A Software Engineer with a knack on solving tough problems.
+				By day, I write code that's clean enough to make future maintainers smile and teaming up with different groups
+				to
+				ship cool stuff.
+				When I'm not untangling technical puzzles at work, you'll catch me tinkering with side projects that sometimes
+				work (and sometimes spectacularly don't).
+				I'm all about making tech that actually makes sense, no jargon required.
 			</p>
 
+			<nav class="mb-2">
+				<ul class="flex flex-row gap-4">
+					<li>
+						<Link href="/projects">
+							<Button>
+								<span class="mx-5 my-2 font-bold">My work</span>
+							</Button>
+						</Link>
+					</li>
+					<li>
+						<Link href="/contact">
+							<Button theme="border">
+								<span class="mx-5 my-2 font-bold">Message me</span>
+							</Button>
+						</Link>
+					</li>
+				</ul>
+			</nav>
 			<Social />
-		</div>
-
+		</article>
 	</section>
 
-	<section class="mt-80">
-		<div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
-			<div class="flex flex-col gap-8">
-				<h1 class="font-extrabold text-4xl">Highlighted Projects</h1>
-				<p class="text-xl mb-5">
+	<section class="flex flex-col gap-12">
+		<article class="flex flex-col md:flex-row md:items-center md:justify-between">
+			<div class="space-y-8">
+				<h2 class="font-extrabold text-4xl">Highlighted Projects</h2>
+				<p class="leading-12">
 					Here are some of the projects I have worked on
 				</p>
 			</div>
 			<Link href="projects">
-				<span class="font-semibold mr-2">View all </span>
-				<RightArrow />
+				<div class="flex items-center">
+					<span class="font-semibold mr-2">View all </span>
+					<RightArrow />
+				</div>
 			</Link>
-		</div>
+		</article>
 
-		<div class="mt-12 grid grid-cols-1 gap-20">
-			{#each projects as project, index}
-				{#if project.highlight}
-					<Highlight {...project} alternate={index % 2 === 1} />
-				{/if}
-			{/each}
-		</div>
-	</section>
-
-
-	<section class="max-w-2xl mx-auto mt-32">
-
-		<h1 id="contact" class="font-extrabold text-4xl mb-8 text-center">Send me a message!</h1>
-
-		<form method="POST" class="space-y-6" use:enhance>
-			<input
-				data-1p-ignore
-				type="text"
-				name="name"
-				placeholder="Your name"
-				required
-				class="mt-1 block w-full h-16 px-5 py-2 rounded-md focus:outline-none focus:ring-cyan-500 focus:border-cyan-500 text-zinc-900"
-			/>
-
-			<input
-				data-1p-ignore
-				type="email"
-				name="email"
-				placeholder="Your email"
-				required
-				class="mt-1 block w-full h-16 px-5 py-2 rounded-md focus:outline-none focus:ring-cyan-500 focus:border-cyan-500 text-zinc-900"
-			/>
-
-			<textarea
-				name="message"
-				placeholder="Your message"
-				required
-				class="mt-1 block w-full px-5 py-5 min-h-40 rounded-md focus:outline-none focus:ring-cyan-500 focus:border-cyan-500 text-zinc-900"
-			></textarea>
-
-
-			<Button type="submit">Submit</Button>
-		</form>
-
-		{#if form && form.message}
-			<p class="mt-4 text-center">{form.message}</p>
-		{/if}
-
+		{#each projects as project}
+			{#if project.highlight}
+				<Project {...project} />
+			{/if}
+		{/each}
 	</section>
 </main>
