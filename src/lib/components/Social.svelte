@@ -8,14 +8,7 @@
 	import Link from '$lib/components/Link.svelte';
 </script>
 
-<ul class="flex flex-row gap-4 items-center list-none">
-	<li>
-		<ListButton>
-			<Link href="mailto:bran.scotthill@gmail.com" target="_blank">
-				<Email />
-			</Link>
-		</ListButton>
-	</li>
+<ul class="flex flex-row gap-10 items-center list-none">
 	<li>
 		<ListButton>
 			<Link href="https://github.com/b-ran" target="_blank">
@@ -27,6 +20,13 @@
 		<ListButton>
 			<Link href="https://www.linkedin.com/in/b-ran" target="_blank">
 				<LinkedIn />
+			</Link>
+		</ListButton>
+	</li>
+	<li>
+		<ListButton>
+			<Link href="mailto:bran.scotthill@gmail.com" target="_blank">
+				<Email />
 			</Link>
 		</ListButton>
 	</li>

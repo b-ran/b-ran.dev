@@ -1,13 +1,24 @@
 <script lang="ts">
-	let { children, onclick = undefined, type = undefined } = $props();
-</script>
+	// Types
+	import type { Snippet } from 'svelte';
 
+	let { children, onclick, type, theme = 'fill' }: {
+		children?: Snippet;
+		onclick?: () => void;
+		type?: 'button' | 'submit' | 'reset';
+		theme?: 'fill' | 'border';
+	} = $props();
+
+</script>
 <button
 	{type}
 	{onclick}
-	class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md text-sm
-	font-medium text-zinc-900 bg-cyan-300
-	hover:bg-cyan-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500"
+	class={[
+		theme === 'fill' && 'bg-cyan-300 hover:bg-cyan-400 border-transparent ',
+		theme === 'border' && 'border-cyan-300 hover:border-cyan-400 dark:text-blue-50',
+		`flex justify-center py-2 px-4 border-2 rounded-lg text-sm
+		font-medium text-zinc-900`
+	]}
 >
 	{@render children?.()}
 </button>
