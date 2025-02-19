@@ -13,7 +13,7 @@ const projects = [
 		title: 'Community Compass',
 		description: 'Web application that collates and visualizes data from across New Zealand to help community organizations make data-driven decisions.',
 		image: IMAGES.CC,
-		href: 'https://app.communitycompass.co.nz',
+		href: 'https://hawkesbay.communitycompass.co.nz',
 		tags: ['SvelteKit', 'Typescript', 'Python', 'FastAPI', 'TailwindCSS', 'AWS', 'Kubernetes', 'Docker'],
 		highlight: true
 	},
