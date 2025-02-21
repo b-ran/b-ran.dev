@@ -9,7 +9,9 @@
 	let { form } = $props();
 </script>
 
-<main class="space-y-18">
+<title>Contact | Brandon Scott-Hill</title>
+
+<main class="space-y-11">
 	<section class="space-y-10 max-w-2xl mt-32">
 
 		<h1 id="contact" class="font-extrabold text-5xl">Contact.</h1>
@@ -55,11 +57,11 @@
 		</form>
 
 		{#if form && form.message}
-			<p class="mt-4 text-center">{form.message}</p>
+			<p class="mt-4">{form.message}</p>
 		{/if}
 	</section>
 
-	<section>
+	<section class="mb-5">
 		<Social />
 	</section>
 
