@@ -31,7 +31,7 @@
 
 <title>Projects | Brandon Scott-Hill</title>
 
-<main class="py-24 space-y-24">
+<main class="py-20 space-y-24">
 	<section class="flex flex-col mb-10">
 		<h1 class="font-extrabold text-5xl leading-snug mb-5">Projects.</h1>
 		<p class="mb-5">Here are some of the projects I have worked on.</p>
