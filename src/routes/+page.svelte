@@ -13,21 +13,18 @@
 
 <title>Brandon Scott-Hill</title>
 
-<main class="lg:pt-48 lg:space-y-48 py-24 space-y-24">
+<main class="lg:pt-24 lg:space-y-36 py-12 space-y-16">
 	<section>
-		<article class="flex flex-col gap-12 lg:max-w-10/12">
-			<h1 class="font-extrabold tracking-wider text-6xl leading-18">
+		<article class="flex flex-col gap-6 md:gap-12 lg:max-w-10/12">
+			<h1 class="font-extrabold tracking-wider text-4xl md:text-6xl leading-tight md:leading-18">
 				I'm Brandon Scott-Hill
 			</h1>
 
-			<p class="leading-12">
+			<p class="leading-relaxed md:leading-12">
 				A Software Engineer with a knack on solving tough problems.
 				By day, I write code that's clean enough to make future maintainers smile and teaming up with different groups
-				to
-				ship cool stuff.
-				When I'm not untangling technical puzzles at work, you'll catch me tinkering with side projects that sometimes
-				work (and sometimes spectacularly don't).
-				I'm all about making tech that actually makes sense, no jargon required.
+				to ship cool stuff. When I'm not untangling technical puzzles at work, you'll catch me tinkering with side
+				projects that sometimes work (and sometimes spectacularly don't).
 			</p>
 
 			<nav class="mb-2">
@@ -52,16 +49,16 @@
 		</article>
 	</section>
 
-	<section class="flex flex-col gap-12">
+	<section class="flex flex-col gap-8">
 		<article class="flex flex-col md:flex-row md:items-center md:justify-between">
-			<div class="space-y-8">
-				<h2 class="font-extrabold text-4xl">Highlighted Projects</h2>
-				<p class="leading-12">
+			<div class="space-y-4 md:space-y-8">
+				<h2 class="font-extrabold text-3xl md:text-4xl">Highlighted Projects</h2>
+				<p class="leading-relaxed md:leading-12">
 					Here are some of the projects I have worked on
 				</p>
 			</div>
 			<Link href="projects">
-				<div class="flex items-center">
+				<div class="flex items-center mt-4 md:mt-0">
 					<span class="font-semibold mr-2">View all </span>
 					<RightArrow />
 				</div>
