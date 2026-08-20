@@ -12,9 +12,8 @@
 <title>Contact | Brandon Scott-Hill</title>
 
 <main class="space-y-11">
-	<section class="space-y-10 max-w-2xl mt-32">
-
-		<h1 id="contact" class="font-extrabold text-5xl">Contact.</h1>
+	<section class="mt-32 max-w-2xl space-y-10">
+		<h1 id="contact" class="text-5xl font-extrabold">Contact.</h1>
 		<p>Send me a message or contact me directly on <b>bran.scotthill@gmail.com</b></p>
 
 		<form method="POST" class="space-y-8" use:enhance>
@@ -25,7 +24,7 @@
 				placeholder="Your name"
 				aria-required="true"
 				required
-				class="block w-full h-16 py-2 pl-4 rounded-md focus:outline-hidden focus:bg-white border border-zinc-200"
+				class="block h-16 w-full rounded-md border border-zinc-200 py-2 pl-4 focus:bg-white focus:outline-hidden"
 			/>
 
 			<input
@@ -35,7 +34,7 @@
 				placeholder="Your email"
 				aria-required="true"
 				required
-				class="block w-full h-16 py-2 pl-4 rounded-md focus:outline-hidden focus:bg-white border border-zinc-200"
+				class="block h-16 w-full rounded-md border border-zinc-200 py-2 pl-4 focus:bg-white focus:outline-hidden"
 			/>
 
 			<textarea
@@ -44,16 +43,12 @@
 				placeholder="Your message"
 				aria-required="true"
 				required
-				class="block w-full py-5 pl-4 resize-none rounded-md focus:outline-hidden focus:bg-white border border-zinc-200"
+				class="block w-full resize-none rounded-md border border-zinc-200 py-5 pl-4 focus:bg-white focus:outline-hidden"
 			></textarea>
 
-
 			<Button type="submit">
-					<span class="mx-5 my-2 font-bold">
-						Send Message
-					</span>
+				<span class="mx-5 my-2 font-bold"> Send Message </span>
 			</Button>
-
 		</form>
 
 		{#if form && form.message}
@@ -64,5 +59,4 @@
 	<section class="mb-5">
 		<Social />
 	</section>
-
 </main>

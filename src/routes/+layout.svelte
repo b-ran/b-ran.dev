@@ -6,12 +6,14 @@
 	// Types
 	import type { Snippet } from 'svelte';
 
-	let { children }: {
+	let {
+		children
+	}: {
 		children?: Snippet;
 	} = $props();
 </script>
 
-<div class="max-w-[1400px] px-5 pt-20 mx-auto text-zinc-900 dark:text-blue-50 ">
+<div class="mx-auto max-w-[1400px] px-5 pt-20 text-zinc-900 dark:text-blue-50">
 	<Header />
 	{@render children?.()}
 </div>

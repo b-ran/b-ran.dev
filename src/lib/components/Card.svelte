@@ -2,11 +2,13 @@
 	// Types
 	import type { Snippet } from 'svelte';
 
-	let { children }: {
+	let {
+		children
+	}: {
 		children?: Snippet;
 	} = $props();
 </script>
 
-<div class="w-full h-full rounded-3xl overflow-hidden">
+<div class="h-full w-full overflow-hidden rounded-3xl">
 	{@render children?.()}
 </div>

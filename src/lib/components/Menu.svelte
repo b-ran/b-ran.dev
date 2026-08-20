@@ -4,7 +4,12 @@
 
 	let { center = false } = $props();
 </script>
-<menu class="flex flex-col md:flex-row {center ? 'items-center' : ''} gap-5 md:gap-20 md:mx-24 list-none">
+
+<menu
+	class="flex flex-col md:flex-row {center
+		? 'items-center'
+		: ''} list-none gap-5 md:mx-24 md:gap-20"
+>
 	<li>
 		<Link href="/">Home</Link>
 	</li>

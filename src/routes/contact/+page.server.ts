@@ -23,18 +23,21 @@ export const actions = {
 			to: env.SENDGRID_EMAIL,
 			from: env.SENDGRID_EMAIL,
 			subject: 'New Message from Contact Form',
-			text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+			text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
 		};
 
-		return sgMail.send(msg).then(() => {
-			return {
-				message: 'Thank you for your message!',
-			};
-		}).catch((error) => {
-			Sentry.captureException(error);
-			return fail(status.INTERNAL_SERVER_ERROR, {
-				message: 'An error occurred while sending the email',
+		return sgMail
+			.send(msg)
+			.then(() => {
+				return {
+					message: 'Thank you for your message!'
+				};
+			})
+			.catch((error) => {
+				Sentry.captureException(error);
+				return fail(status.INTERNAL_SERVER_ERROR, {
+					message: 'An error occurred while sending the email'
+				});
 			});
-		});
 	}
 };

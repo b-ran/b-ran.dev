@@ -16,7 +16,7 @@
 
 {#if displayUpButton}
 	<button
-		class="fixed bottom-10 right-10 transition-all bg-cyan-300 rounded-2xl w-10 h-10 flex items-center justify-center shadow-elevated"
+		class="shadow-elevated fixed right-10 bottom-10 flex h-10 w-10 items-center justify-center rounded-2xl bg-cyan-300 transition-all"
 		onclick={() => window.scroll({ top: 0, behavior: 'smooth' })}
 	>
 		<UpArrow />

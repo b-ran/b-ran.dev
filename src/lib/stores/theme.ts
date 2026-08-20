@@ -3,10 +3,13 @@ import { writable } from 'svelte/store';
 import { browser } from '$app/environment';
 
 const createThemeStore = () => {
-	const { subscribe, set } = writable(browser && (
-		localStorage.theme === 'dark' ||
-		(!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
-	) ? 'dark' : 'light');
+	const { subscribe, set } = writable(
+		browser &&
+			(localStorage.theme === 'dark' ||
+				(!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches))
+			? 'dark'
+			: 'light'
+	);
 
 	const setTheme = (theme: string) => {
 		if (!browser) return;

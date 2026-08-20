@@ -8,23 +8,22 @@
 	// Exports
 	import projects from '$lib/shared/projects';
 	import Project from '$lib/components/Project.svelte';
-
 </script>
 
 <title>Brandon Scott-Hill</title>
 
-<main class="lg:pt-24 lg:space-y-36 py-12 space-y-16">
+<main class="space-y-16 py-12 lg:space-y-36 lg:pt-24">
 	<section>
 		<article class="flex flex-col gap-6 md:gap-12 lg:max-w-10/12">
-			<h1 class="font-extrabold tracking-wider text-4xl md:text-6xl leading-tight md:leading-18">
+			<h1 class="text-4xl leading-tight font-extrabold tracking-wider md:text-6xl md:leading-18">
 				I'm Brandon Scott-Hill
 			</h1>
 
 			<p class="leading-relaxed md:leading-12">
-				A Software Engineer with a knack on solving tough problems.
-				By day, I write code that's clean enough to make future maintainers smile and teaming up with different groups
-				to ship cool stuff. When I'm not untangling technical puzzles at work, you'll catch me tinkering with side
-				projects that sometimes work (and sometimes spectacularly don't).
+				A Software Engineer with a knack on solving tough problems. By day, I write code that's
+				clean enough to make future maintainers smile and teaming up with different groups to ship
+				cool stuff. When I'm not untangling technical puzzles at work, you'll catch me tinkering
+				with side projects that sometimes work (and sometimes spectacularly don't).
 			</p>
 
 			<nav class="mb-2">
@@ -52,14 +51,12 @@
 	<section class="flex flex-col gap-8">
 		<article class="flex flex-col md:flex-row md:items-center md:justify-between">
 			<div class="space-y-4 md:space-y-8">
-				<h2 class="font-extrabold text-3xl md:text-4xl">Highlighted Projects</h2>
-				<p class="leading-relaxed md:leading-12">
-					Here are some of the projects I have worked on
-				</p>
+				<h2 class="text-3xl font-extrabold md:text-4xl">Highlighted Projects</h2>
+				<p class="leading-relaxed md:leading-12">Here are some of the projects I have worked on</p>
 			</div>
 			<Link href="projects">
-				<div class="flex items-center mt-4 md:mt-0">
-					<span class="font-semibold mr-2">View all </span>
+				<div class="mt-4 flex items-center md:mt-0">
+					<span class="mr-2 font-semibold">View all </span>
 					<RightArrow />
 				</div>
 			</Link>

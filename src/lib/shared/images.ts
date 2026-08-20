@@ -10,24 +10,24 @@ export interface Image {
 }
 
 export const IMAGES = {
-	'CC': {
+	CC: {
 		src: cc,
 		alt: 'Project screenshot of Community Compass'
 	},
-	'CV_GEN': {
+	CV_GEN: {
 		src: cvGen,
 		alt: 'Project screenshot of a CV PDF Generator'
 	},
-	'DOT_PORTAL': {
+	DOT_PORTAL: {
 		src: dotPortal,
 		alt: 'Project screenshot of DOT Portal'
 	},
-	'NIX': {
+	NIX: {
 		src: nix,
 		alt: 'Project screenshot of a NixOS Desktop'
 	},
-	'THE_SAUCE': {
+	THE_SAUCE: {
 		src: theSauce,
 		alt: 'Project screenshot of The Sauce'
-	},
+	}
 } as const;

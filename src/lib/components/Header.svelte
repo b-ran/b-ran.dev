@@ -14,14 +14,16 @@
 	}
 </script>
 
-<header class="flex flex-col md:flex-row font-semibold text-lg items-center dark:text-blue-50 z-50 mb-10">
-	<div class="flex flex-row w-full md:w-auto">
-		<div class="bg-cyan-300 rounded-2xl ">
+<header
+	class="z-50 mb-10 flex flex-col items-center text-lg font-semibold md:flex-row dark:text-blue-50"
+>
+	<div class="flex w-full flex-row md:w-auto">
+		<div class="rounded-2xl bg-cyan-300">
 			<Link href="/">
-				<h1 class="text-zinc-900 font-extrabold p-4">BS</h1>
+				<h1 class="p-4 font-extrabold text-zinc-900">BS</h1>
 			</Link>
 		</div>
-		<div class="md:hidden ml-auto flex items-center">
+		<div class="ml-auto flex items-center md:hidden">
 			<IconButton onclick={toggleDrawer}>
 				{#if isDrawerOpen}
 					<Close />
@@ -35,8 +37,4 @@
 	<Drawer bind:isDrawerOpen>
 		<Navigation />
 	</Drawer>
-
-
-
 </header>
-

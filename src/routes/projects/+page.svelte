@@ -15,14 +15,12 @@
 		if (search === '') return projects;
 
 		const searchTerm = search.toLowerCase();
-		return projects.filter(project => {
+		return projects.filter((project) => {
 			// Check title
 			const titleMatch = project.title.toLowerCase().includes(searchTerm);
 
 			// Check tags
-			const tagMatch = project.tags?.some(tag =>
-				tag.toLowerCase().includes(searchTerm)
-			);
+			const tagMatch = project.tags?.some((tag) => tag.toLowerCase().includes(searchTerm));
 
 			return titleMatch || tagMatch;
 		});
@@ -31,20 +29,20 @@
 
 <title>Projects | Brandon Scott-Hill</title>
 
-<main class="py-20 space-y-24">
-	<section class="flex flex-col mb-10">
-		<h1 class="font-extrabold text-5xl leading-snug mb-5">Projects.</h1>
+<main class="space-y-24 py-20">
+	<section class="mb-10 flex flex-col">
+		<h1 class="mb-5 text-5xl leading-snug font-extrabold">Projects.</h1>
 		<p class="mb-5">Here are some of the projects I have worked on.</p>
-
 	</section>
 
-	<section class="grid 2xl:grid-cols-2 grid-cols-1 gap-10">
+	<section class="grid grid-cols-1 gap-10 2xl:grid-cols-2">
 		{#each filteredProjects as project}
-			<div class="w-full"
-				in:scale={{duration: 300, delay: 300, start: 0.95}}
-				out:fade={{duration: 200}}
+			<div
+				class="w-full"
+				in:scale={{ duration: 300, delay: 300, start: 0.95 }}
+				out:fade={{ duration: 200 }}
 			>
-			<Project {...project} />
+				<Project {...project} />
 			</div>
 		{/each}
 	</section>

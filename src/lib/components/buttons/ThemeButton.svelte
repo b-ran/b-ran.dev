@@ -13,15 +13,15 @@
 	class="items-center rounded-2xl bg-cyan-300 text-zinc-900"
 	onclick={theme.toggle}
 	in:scale={{
-      duration: 300,
-      start: 0.8,
-      opacity: 0
-    }}
+		duration: 300,
+		start: 0.8,
+		opacity: 0
+	}}
 >
-		<span
-			class="flex items-center justify-center
-        w-10 h-10"
-		>
-				<DarkMode />
-    </span>
+	<span
+		class="flex h-10 w-10
+        items-center justify-center"
+	>
+		<DarkMode />
+	</span>
 </button>

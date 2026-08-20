@@ -8,7 +8,7 @@
 	import Link from '$lib/components/Link.svelte';
 </script>
 
-<ul class="flex flex-row gap-10 items-center list-none">
+<ul class="flex list-none flex-row items-center gap-10">
 	<li>
 		<ListButton>
 			<Link href="https://github.com/b-ran" target="_blank">
